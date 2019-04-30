@@ -1,21 +1,27 @@
-# Bigdata insert
+# Bigdata insert [![npm](https://img.shields.io/npm/v/bigdata-insert.svg)](https://www.npmjs.com/package/bigdata-insertl) [![license](https://img.shields.io/github/license/suvradip/bigdata-insert.svg)](https://github.com/suvradip/bigdata-insert/blob/master/LICENSE)
 
 > A small utility tool to help insert rows to mysql database from a csv file.
 
-### Install
+## Why should I care?
+
+Say you have a big csv file (comma separated) which containe millions of rows and you want to insert those data into mysql database. How do you do that? Great news is that this package help you to that easily with minimum code if you are using [sequlize](http://docs.sequelizejs.com/).
+
+## Installation
 
 ```
 $ npm install bigdata-insert
 ```
 
-### Usage
+## Usage
 
 ```js
 const path = require('path');
 const BigDataInsert = require('bigdata-insert');
 
-// Please note here, we are using sequilize as a dependency and
-// these models are constructed using sequilize data structure
+/**
+ *  Please note here, we are using sequilize as a dependency and
+ *  these [models](http://docs.sequelizejs.com/manual/models-definition.html#import) are constructed using sequilize data structure
+ */
 const stocks = require('./data/models/stocks');
 const prices = require('./data/models/prices');
 
@@ -40,6 +46,8 @@ bdi.start();
 ```
 
 ## API(s)
+
+### constructor
 
 Constructor has two parameter options and callback
 
@@ -83,10 +91,11 @@ DATABASE_HOST =
 `callback` parameter description
 
 callback has a paramer which is a sequilze model defination. This callback helps to do association as per sequilize document. You need to define a `name` in each model while passing to the constructor.
-for example
+
+Example
 
 ```js
-const di = new BigDataInsert(
+const bdi = new BigDataInsert(
    {
       models: [
          {
@@ -111,13 +120,12 @@ const di = new BigDataInsert(
 );
 ```
 
-### connection
+### start()
 
-You can also define the connection settings in .env file like this
+To start the data insertion process
 
-```
-DATABASE_NAME = stock-data
-DATABASE_USERNAME = root
-DATABASE_PASSWORD =
-DATABASE_HOST =
+Example
+
+```js
+bdi.start();
 ```

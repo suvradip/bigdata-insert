@@ -1,6 +1,6 @@
 {
    "name": "bigdata-insert",
-   "version": "0.0.2",
+   "version": "0.0.3",
    "description": "A small utility tool to help insert rows to mysql database from a csv file.",
    "main": "src/index.js",
    "scripts": {

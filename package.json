@@ -1,6 +1,6 @@
 {
    "name": "bigdata-insert",
-   "version": "0.0.1",
+   "version": "0.0.2",
    "description": "A small utility tool to help insert rows to mysql database from a csv file.",
    "main": "src/index.js",
    "scripts": {
@@ -24,11 +24,11 @@
       "import",
       "mysql",
       "csv",
-		"insert",
-		"csv to mysql"
+      "insert",
+      "csv to mysql"
    ],
-   "author": "Suvradip Saha",
-   "license": "ISC",
+   "author": "Suvradip Saha <suvradip.12@gmail.com>",
+   "license": "MIT",
    "dependencies": {
       "csv-parser": "^2.2.0",
       "dotenv": "^7.0.0",
@@ -47,5 +47,13 @@
       "husky": "^2.1.0",
       "lint-staged": "^8.1.5",
       "mocha": "^6.1.4"
-   }
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/suvradip/bigdata-insert.git"
+   },
+   "bugs": {
+      "url": "https://github.com/suvradip/bigdata-insert/issues"
+   },
+   "homepage": "https://github.com/suvradip/bigdata-insert#readme"
 }

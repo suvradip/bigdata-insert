@@ -1,4 +1,4 @@
-# Bigdata insert [![npm](https://img.shields.io/npm/v/bigdata-insert.svg)](https://www.npmjs.com/package/bigdata-insertl) [![license](https://img.shields.io/github/license/suvradip/bigdata-insert.svg)](https://github.com/suvradip/bigdata-insert/blob/master/LICENSE)
+# Bigdata insert [![npm](https://img.shields.io/npm/v/bigdata-insert.svg)](https://www.npmjs.com/package/bigdata-insert) [![license](https://img.shields.io/github/license/suvradip/bigdata-insert.svg)](https://github.com/suvradip/bigdata-insert/blob/master/LICENSE)
 
 > A small utility tool to help insert rows to mysql database from a csv file.
 
@@ -62,8 +62,8 @@ constructor({
 
 ```js
 models: [{
-	file:  <required : absolute path to csv file>
-	model: <required : sequelize model structure>
+	file:  <required : absolute path to csv file>,
+	model: <required : sequelize model structure>,
 	name:  <optional : for model reference key>
 }]
 ```
@@ -72,9 +72,9 @@ models: [{
 
 ```js
 connection: {
-	dbname: <name of a database>
-	user: <database username>
-	pass: <database password>
+	dbname: <name of a database>,
+	user: <database username>,
+	pass: <database password>,
 	host: <database host>
 }
 ```

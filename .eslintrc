@@ -1,0 +1,41 @@
+{
+   "extends": ["airbnb-base", "prettier"],
+   "env": {
+      "node": true,
+      "mocha": true
+   },
+
+   "rules": {
+      "indent": ["error", 3],
+      "max-len": "off",
+      "no-console": "off",
+      "comma-dangle": ["error", "always-multiline"],
+      "import/no-extraneous-dependencies": [
+         "error",
+         {
+            "devDependencies": true
+         }
+      ],
+      "no-param-reassign": [
+         "error",
+         {
+            "props": false
+         }
+      ],
+      "no-underscore-dangle": "off",
+      "no-unused-vars": [
+         "error",
+         {
+            "vars": "all",
+            "args": "none",
+            "ignoreRestSiblings": false
+         }
+      ],
+      "no-unused-expressions": [
+         "error",
+         {
+            "allowShortCircuit": true
+         }
+      ]
+   }
+}
